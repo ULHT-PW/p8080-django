@@ -1,0 +1,14 @@
+services:
+  web:
+    build: .
+    container_name: django-app
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    networks:
+      - pw-network
+
+networks:
+  pw-network:
+    external: true
