@@ -5,10 +5,10 @@ services:
     volumes:
       - .:/app
     ports:
-      - "8000:8000"
+      - "3000:3000"
     networks:
       - pw-network
 
 networks:
   pw-network:
-    external: true
+    driver: bridge
