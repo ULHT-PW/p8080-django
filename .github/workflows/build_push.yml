@@ -8,6 +8,10 @@ on:
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
+
+    env:
+      REPOSITORY_NAME: ulht-pw
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -24,4 +28,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:latest
+          tags: ghcr.io/${{ env.REPOSITORY_NAME }}/${{ github.event.repository.name }}:latest
