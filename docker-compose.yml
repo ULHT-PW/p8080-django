@@ -6,9 +6,3 @@ services:
       - .:/app
     ports:
       - "3000:3000"
-    networks:
-      - pw-network
-
-networks:
-  pw-network:
-    driver: bridge
